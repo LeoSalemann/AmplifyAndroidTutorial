@@ -3,12 +3,18 @@ buildscript {
     repositories {
         google()
         jcenter()
+
+        // Added per Amplify Tutorial, Add Amplify to your application, step 1
+        mavenCentral()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+        // Added per Amplify Tutorial, Add Amplify to your application, step 1
+        classpath 'com.amplifyframework:amplify-tools-gradle-plugin:1.0.1'
     }
 }
 
@@ -22,3 +28,6 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+// Added per Amplify Tutorial, Add Amplify to your application, step 1
+apply plugin: 'com.amplifyframework.amplifytools'
